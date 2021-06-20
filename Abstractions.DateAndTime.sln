@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions.DateAndTime", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions.DateAndTime.Tests", "Abstractions.DateAndTime.Tests\Abstractions.DateAndTime.Tests.csproj", "{7905CB89-8AAB-4A0E-BDDB-DA47B789149A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions.DateAndTime.ExampleApp", "Abstractions.DateAndTime.ExampleApp\Abstractions.DateAndTime.ExampleApp.csproj", "{15260632-E8C3-47F1-BE93-938BD61408D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7905CB89-8AAB-4A0E-BDDB-DA47B789149A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7905CB89-8AAB-4A0E-BDDB-DA47B789149A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7905CB89-8AAB-4A0E-BDDB-DA47B789149A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15260632-E8C3-47F1-BE93-938BD61408D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15260632-E8C3-47F1-BE93-938BD61408D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15260632-E8C3-47F1-BE93-938BD61408D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15260632-E8C3-47F1-BE93-938BD61408D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
