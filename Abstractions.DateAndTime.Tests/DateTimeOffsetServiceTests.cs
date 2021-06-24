@@ -4,6 +4,7 @@ using NUnit.Framework;
 using System;
 using System.Linq;
 using System.Reflection;
+using TimeZoneConverter;
 
 namespace Abstractions.DateAndTime.Tests
 {
@@ -43,7 +44,7 @@ namespace Abstractions.DateAndTime.Tests
         public void IDateTimeOffsetService_DateTimeOffsetNowCanBeFaked()
         {
             // Arrange
-            var pacificStandardTimeUtcOffset = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time").BaseUtcOffset;
+            var pacificStandardTimeUtcOffset = TZConvert.GetTimeZoneInfo("Pacific Standard Time").BaseUtcOffset;
             var targetDateTimeOffset = new DateTimeOffset(2021, 01, 02, 12, 34, 56, pacificStandardTimeUtcOffset);
             A.CallTo(() => _dateTimeOffsetService.Now()).Returns(targetDateTimeOffset);
 
@@ -61,7 +62,7 @@ namespace Abstractions.DateAndTime.Tests
         public void IDateTimeOffsetService_DateTimeOffsetUtcNowCanBeFaked()
         {
             // Arrange
-            var tokyoStandardTimeUtcOffset = TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time").BaseUtcOffset;
+            var tokyoStandardTimeUtcOffset = TZConvert.GetTimeZoneInfo("Tokyo Standard Time").BaseUtcOffset;
             var targetDateTimeOffset = new DateTimeOffset(2021, 01, 02, 12, 34, 56, tokyoStandardTimeUtcOffset);
             A.CallTo(() => _dateTimeOffsetService.UtcNow()).Returns(targetDateTimeOffset);
 
