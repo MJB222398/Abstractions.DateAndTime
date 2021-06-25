@@ -1,5 +1,6 @@
 ﻿using Abstractions.DateAndTime.Services;
 using System;
+using System.Globalization;
 
 namespace Abstractions.DateAndTime.ExampleApp.Helpers
 {
@@ -16,12 +17,12 @@ namespace Abstractions.DateAndTime.ExampleApp.Helpers
 
         public string FormatCurrentDateTime()
         {
-            return _dateTimeService.Now().ToString();
+            return _dateTimeService.Now().ToString(new CultureInfo("en-GB"));
         }
 
         public string FormatCurrentOffsetDateTime()
         {
-            return _dateTimeOffsetService.Now().ToString();
+            return _dateTimeOffsetService.Now().ToString(new CultureInfo("en-GB"));
         }
     }
 }
