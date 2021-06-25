@@ -1,12 +1,12 @@
 ![CI Build](https://github.com/MJB222398/Abstractions.DateAndTime/actions/workflows/ci.yml/badge.svg)
 
 # Abstractions.DateAndTime
-A simple library for abstracting .NET's `System.DateTime` and `System.DateTimeOffset`.
+A simple library for abstracting the static properties in .NET's `System.DateTime` and `System.DateTimeOffset`.
 
 The structs `System.DateTime` and `System.DateTimeOffset` each have a few static properties that are abstracted here in the following interfaces and their implementations:
 
-- `IDateTimeService` - abstracts the `Now`, `UtcNow` and `Today` properties from System.DateTime.
-- `IDateTimeOffsetService` - abstracts the `Now` and `UtcNow` properties from System.DateTimeOffset.
+- `IDateTimeService` - abstracts the `Now`, `UtcNow` and `Today` properties from `System.DateTime`.
+- `IDateTimeOffsetService` - abstracts the `Now` and `UtcNow` properties from `System.DateTimeOffset`.
 
 These abstractions can be faked, allowing for methods that access the system's date and time, to be unit tested. 
 
