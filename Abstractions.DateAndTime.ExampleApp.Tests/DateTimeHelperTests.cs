@@ -10,11 +10,13 @@ namespace Abstractions.DateAndTime.ExampleApp.Tests
     {
         private readonly IDateTimeHelper _dateTimeHelper;
         private readonly IDateTimeService _dateTimeService;
+        private readonly IDateTimeOffsetService _dateTimeOffsetService;
 
         public DateTimeHelperTests()
         {
             _dateTimeService = A.Fake<IDateTimeService>();
-            _dateTimeHelper = new DateTimeHelper(_dateTimeService, A.Fake<IDateTimeOffsetService>());
+            _dateTimeOffsetService = A.Fake<IDateTimeOffsetService>();
+            _dateTimeHelper = new DateTimeHelper(_dateTimeService, _dateTimeOffsetService);
         }
 
         [Test]
@@ -28,6 +30,19 @@ namespace Abstractions.DateAndTime.ExampleApp.Tests
 
             //ASSERT
             Assert.That(formattedCurrentDateTime, Is.EqualTo("20/06/2021 13:21:04"));
+        }
+
+        [Test]
+        public void FormatCurrentOffsetDateTime_ReturnsCorrectlyFormattedDateTime()
+        {
+            // ARRANGE
+            A.CallTo(() => _dateTimeOffsetService.Now()).Returns(new DateTimeOffset(2021, 6, 20, 13, 21, 04, new TimeSpan(2, 0, 0)));
+
+            // ACT
+            var formattedCurrentOffsetDateTime = _dateTimeHelper.FormatCurrentOffsetDateTime();
+
+            //ASSERT
+            Assert.That(formattedCurrentOffsetDateTime, Is.EqualTo("20/06/2021 13:21:04 +02:00"));
         }
     }
 }
