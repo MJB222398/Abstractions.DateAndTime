@@ -1,3 +1,5 @@
+![CI Build](https://github.com/MJB222398/Abstractions.DateAndTime/actions/workflows/ci.yml/badge.svg)
+
 # Abstractions.DateAndTime
 A simple library for abstracting .NET's `System.DateTime` and `System.DateTimeOffset`.
 
