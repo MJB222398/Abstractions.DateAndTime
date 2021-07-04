@@ -1,4 +1,5 @@
 ![CI Build](https://github.com/MJB222398/Abstractions.DateAndTime/actions/workflows/ci.yml/badge.svg)
+[![NuGet version (Abstractions.DateAndTime)](https://img.shields.io/nuget/v/Abstractions.DateAndTime.svg)](https://www.nuget.org/packages/Abstractions.DateAndTime)
 
 # Abstractions.DateAndTime
 A simple library for abstracting the static properties in .NET's `System.DateTime` and `System.DateTimeOffset`.
