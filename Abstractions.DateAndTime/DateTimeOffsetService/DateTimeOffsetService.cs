@@ -4,10 +4,6 @@ namespace Abstractions.DateAndTime.Services
 {
     public class DateTimeOffsetService : IDateTimeOffsetService
     {
-        public DateTimeOffsetService()
-        {
-        }
-
         public DateTimeOffset Now()
         {
             return DateTimeOffset.Now;

@@ -21,13 +21,12 @@ namespace Abstractions.DateAndTime.ExampleApp
 
         private static IServiceProvider GetServiceProvider()
         {
-            var services = new ServiceCollection();
-            services.AddSingleton<IConsoleOutputManager, ConsoleOutputManager>();
-            services.AddSingleton<IDateTimeHelper, DateTimeHelper>();
-            services.AddDateTimeService();
-            services.AddDateTimeOffsetService();
-
-            return services.BuildServiceProvider();
+            return new ServiceCollection()
+                .AddSingleton<IConsoleOutputManager, ConsoleOutputManager>()
+                .AddSingleton<IDateTimeHelper, DateTimeHelper>()
+                .AddDateTimeService()
+                .AddDateTimeOffsetService()
+                .BuildServiceProvider();
         }
     }
 }

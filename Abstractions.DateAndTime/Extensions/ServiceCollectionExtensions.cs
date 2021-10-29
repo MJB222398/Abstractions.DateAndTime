@@ -11,9 +11,7 @@ namespace Abstractions.DateAndTime.Extensions
             if (services == null)
                 throw new ArgumentNullException(nameof(services));
 
-            services.AddSingleton<IDateTimeService, DateTimeService>();
-
-            return services;
+            return services.AddSingleton<IDateTimeService, DateTimeService>();
         }
 
         public static IServiceCollection AddDateTimeOffsetService(this IServiceCollection services)
@@ -21,9 +19,7 @@ namespace Abstractions.DateAndTime.Extensions
             if (services == null)
                 throw new ArgumentNullException(nameof(services));
 
-            services.AddSingleton<IDateTimeOffsetService, DateTimeOffsetService>();
-
-            return services;
+            return services.AddSingleton<IDateTimeOffsetService, DateTimeOffsetService>();
         }
     }
 }

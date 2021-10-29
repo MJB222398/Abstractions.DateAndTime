@@ -57,13 +57,13 @@ public DateTimeHelperTests()
 [Test]
 public void FormatCurrentDateTime_ReturnsCorrectlyFormattedDateTime()
 {
-    // ARRANGE
+    // Arrange
     A.CallTo(() => _dateTimeService.Now()).Returns(new DateTime(2021, 6, 20, 13, 21, 04));
 
-    // ACT
+    // Act
     var formattedCurrentDateTime = _dateTimeHelper.FormatCurrentDateTime();
 
-    //ASSERT
+    // Assert
     Assert.That(formattedCurrentDateTime, Is.EqualTo("20/06/2021 13:21:04"));
 }
 ```

@@ -4,10 +4,6 @@ namespace Abstractions.DateAndTime.Services
 {
     public class DateTimeService : IDateTimeService
     {
-        public DateTimeService()
-        {
-        }
-
         public DateTime Now()
         {
             return DateTime.Now;
