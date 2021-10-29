@@ -10,11 +10,21 @@
 		<RepositoryUrl>https://github.com/MJB222398/Abstractions.DateAndTime.git</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>datetime datetimeoffset abstractions faking mocking unittesting</PackageTags>
-		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<PackageReleaseNotes>Assembly now strong named and signed</PackageReleaseNotes>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageIconUrl />
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>2.0.0</Version>
+		<Version>2.1.0</Version>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\sgKey.snk</AssemblyOriginatorKeyFile>
+		<DelaySign>false</DelaySign>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<SignAssembly>false</SignAssembly>
 	</PropertyGroup>
 
 	<ItemGroup>
