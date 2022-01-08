@@ -6,9 +6,9 @@ using System;
 
 namespace Abstractions.DateAndTime.ExampleApp
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var outputManager = GetServiceProvider().GetRequiredService<IConsoleOutputManager>();
 
