@@ -22,7 +22,8 @@ namespace Abstractions.DateAndTime.Tests
         {
             var dateTimeOffsetStaticProperties = typeof(DateTimeOffset).GetProperties(BindingFlags.Public | BindingFlags.Static);
             var dateTimeOffsetServiceMethods = typeof(IDateTimeOffsetService).GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                .Where(m => m.GetParameters().Length == 0);
+                .Where(m => m.GetParameters().Length == 0)
+                .ToList();
 
             Assert.That(
                 dateTimeOffsetStaticProperties.Select(m => m.Name),

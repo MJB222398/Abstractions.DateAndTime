@@ -21,7 +21,8 @@ namespace Abstractions.DateAndTime.Tests
         {
             var dateTimeStaticProperties = typeof(DateTime).GetProperties(BindingFlags.Public | BindingFlags.Static);
             var dateTimeServiceMethods = typeof(IDateTimeService).GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                .Where(m => m.GetParameters().Length == 0);
+                .Where(m => m.GetParameters().Length == 0)
+                .ToList();
 
             Assert.That(
                 dateTimeStaticProperties.Select(m => m.Name),
